@@ -12,6 +12,9 @@ header, main, footer {
 h1 {
     display: inline-block;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: Minecraft, 'Courier New', Courier, monospace;
+}
 
 @media only screen and (min-width: 768px) {
     body {
