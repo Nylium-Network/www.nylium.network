@@ -1,0 +1,6 @@
+<FilesMatch "\.(ttf|otf|eot|woff|js|css|woff2)$">
+    <IfModule mod_headers.c>
+        SetEnvIf Origin "^http(s)?:\/\/(\S+?(\.nylium\.network))|(nyliumnetwork\.)((dreamwidth\.org)|(tumblr\.com))$" AccessControlAllowOrigin=$0
+        Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    </IfModule>
+</FilesMatch>
