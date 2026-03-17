@@ -1,0 +1,25 @@
+html {
+    background-color: darkgray;
+}
+
+header, main, footer {
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    border: .5em outset gray;
+}
+
+h1 {
+    display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 20% 60% 20%;
+    }
+    header, main, footer {
+        grid-column: 2 / span 1;
+    }
+}
