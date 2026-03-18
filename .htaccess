@@ -1,3 +1,4 @@
 <FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
-    Header set Access-Control-Allow-Origin "*"
+    SetEnvIf Origin "/^(http(s)?:\/\/)?(\S*)(nylium\.?network)((\.dreamwidth\.org)*|(\.tumblr\.com)*)$" ORIGIN=$0
+    Header always set Access-Control-Allow-Origin %{ORIGIN}e env=ORIGIN
 </FilesMatch>
