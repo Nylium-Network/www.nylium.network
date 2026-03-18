@@ -1,3 +1,4 @@
 SetEnvIf Origin "/^(http(s)?:\/\/)?(\S*)(nylium\.?network)((\.dreamwidth\.org)*|(\.tumblr\.com)*)$" ORIGIN=$0
 Header always set Access-Control-Allow-Origin %{ORIGIN}e env=ORIGIN
+Header set Access-Control-Allow-Credentials "true" env=ORIGIN
 Header merge Vary Origin
