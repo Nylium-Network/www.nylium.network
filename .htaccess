@@ -1,6 +1,6 @@
 # Sets CORS headers for request from example1.com and example2.com pages
 # for both SSL and non-SSL
-SetEnvIf Origin "^http(s)?:\/\/(\S+?(\.nylium\.network))|(nyliumnetwork\.)((dreamwidth\.org)|(tumblr\.com))$" ORIGIN=$0
+SetEnvIf Origin "^http(s)?:\/\/(\S+?((\.nylium\.network)|(\.dreamwidth\.org)))|(nyliumnetwork\.tumblr\.com))$" ORIGIN=$0
 Header always set Access-Control-Allow-Origin %{ORIGIN}e env=ORIGIN
 Header set Access-Control-Allow-Credentials "true" env=ORIGIN
 # Always set Vary: Origin when it's possible you may send CORS headers
